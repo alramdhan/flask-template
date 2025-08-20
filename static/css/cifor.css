@@ -1,0 +1,122 @@
+:root {
+    --bs-blue: #63b3ed;
+    --bs-indigo: #596cff;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #f56565;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #fbd38d;
+    --bs-green: #81e6d9;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #00d2d3;
+    --bs-secondary: #8392ab;
+    --bs-success: #82d616;
+    --bs-info: #17c1e8;
+    --bs-warning: #fbcf33;
+    --bs-danger: #ea0606;
+    --bs-light: #e9ecef;
+    --bs-dark: #344767;
+    --bs-white: #fff;
+    --bs-font-sans-serif: "Open Sans";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, hsla(0, 0%, 100%, .15), hsla(0, 0%, 100%, 0))
+}
+
+.shadow-teal {
+    box-shadow: 0 1px 50px -15px #20c9966b;
+}
+
+.bg-cf-primary {
+    background-color: var(--bs-primary);
+}
+
+.bg-cf-primary-50 {
+    background-color: #a5caca;
+}
+
+.bg-cf-primary-100 {
+    background-color: #91c7c7;
+}
+
+.bg-cf-primary-500 {
+    background-color: var(--bs-primary);
+}
+
+.bg-theme-cf-2 {
+    background: linear-gradient(to top right, var(--bs-teal) 20%, var(--bs-primary) 60%);
+}
+
+.cf-gradient-primary {
+    background: linear-gradient(to bottom right, var(--bs-primary), var(--bs-teal));
+    color: white;
+}
+
+.cf-gradient-primary:hover {
+    transform: scale(1.04);
+}
+
+.cf-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+}
+
+.cf-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.ts-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #CCC;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.ts-slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .ts-slider {
+    background-color: var(--bs-primary);
+}
+
+input:focus + .ts-slider {
+    box-shadow: 0 0 1px var(--bs-primary);
+}
+
+input:checked + .ts-slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+}
+
+.ts-slider.switch-round {
+    border-radius: 24px;
+}
+
+.ts-slider.switch-round:before {
+    border-radius: 50%;
+}
+
+.rounded-xl {
+    border-radius: 1rem;
+}

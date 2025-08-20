@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-pc-preset="preset-1" data-pc-sidebar-caption="true" data-pc-direction="ltr" dir="ltr" data-pc-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>{%block title %}{% endblock %}</title>
+  <link rel="shortcut icon" href="https://www.cifor-icraf.org/wp-content/uploads/2021/04/cropped-cifor-icraf-favicon-01-192x192.png" type="image/x-icon" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="Dika Alfarell" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='fonts/material.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" id="main-style-link">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/cifor.css') }}" id="main-style-link">
+</head>
+<body>
+  <div class="auth-main relative">
+      <div class="auth-wrapper v1 flex items-center w-full h-full min-h-screen">
+        <div class="auth-form flex items-center justify-center grow flex-col min-h-screen relative p-6 ">
+          <div class="w-full max-w-[350px] relative">
+            <div class="auth-bg ">
+              <span class="absolute top-[-100px] right-[-100px] w-[300px] h-[300px] block rounded-full bg-theme-bg-1 animate-[floating_7s_infinite]"></span>
+              <span class="absolute top-[150px] right-[-150px] w-5 h-5 block rounded-full bg-cf-primary-500 animate-[floating_9s_infinite]"></span>
+              <span class="absolute left-[-150px] bottom-[150px] w-5 h-5 block rounded-full bg-theme-bg-1 animate-[floating_7s_infinite]"></span>
+              <span class="absolute left-[-100px] bottom-[-100px] w-[300px] h-[300px] block rounded-full bg-theme-cf-2 animate-[floating_9s_infinite]"></span>
+            </div>
+            {% block content %}{% endblock %}
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
